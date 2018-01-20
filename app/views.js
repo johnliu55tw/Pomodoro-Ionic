@@ -30,7 +30,19 @@ export function pomodoro (pomoTimer) {
                     pomoTimer.totalIntervals.toString()
   // The countdown circle
   // XXX Fixed this
-  pomoCircle.sweepAngle = 360
+  let countdownTotal = null
+  switch (pomoTimer.intvlState) {
+    case PomoIntvlState.work:
+      countdownTotal = pomoTimer.work
+      break
+    case PomoIntvlState.rest:
+      countdownTotal = pomoTimer.rest
+      break
+    case PomoIntvlState.longRest:
+      countdownTotal = pomoTimer.longRest
+      break
+  }
+  pomoCircle().sweepAngle = (pomoTimer.countdown / countdownTotal) * 360
 
   // When paused, only the circle will be gray. The text will be the color indicating
   // what states it currently on
