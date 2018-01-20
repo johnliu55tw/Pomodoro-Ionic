@@ -31,12 +31,12 @@ buttons.stat().addEventListener('click', (evt) => {
 buttons.flag().addEventListener('click', () => {
   console.log('Flag clicked.')
   vibration.start('confirmation')
-  document.getElementById('options-container').style.visibility = "visible"
-  document.getElementById('flag-button').style.visibility = "hidden"
+  document.getElementById('options-container').style.visibility = 'visible'
+  document.getElementById('flag-button').style.visibility = 'hidden'
   // Close after 3 seconds
   setTimeout(() => {
-    document.getElementById('options-container').style.visibility = "hidden"
-    document.getElementById('flag-button').style.visibility = "visible"
+    document.getElementById('options-container').style.visibility = 'hidden'
+    document.getElementById('flag-button').style.visibility = 'visible'
     vibration.start('confirmation')
   }, 3000)
 })
