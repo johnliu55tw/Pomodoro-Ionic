@@ -5,10 +5,46 @@ import * as buttons from 'buttons'
 import * as views from 'views'
 import {PomodoroTimer} from 'pomodoro'
 import {CONFIG} from 'config'
+import {me} from 'appbit'
 
-// Creating PomodoroTimer instance
-console.log('Create new PomodoroTimer.')
-let pomo = new PomodoroTimer(CONFIG.pomodoroSettings)
+/* DEBUGGING: Read and show stored pomo file. Uncomment this part if you need to
+ * inspect the stored file.
+import * as fs from 'fs'
+try {
+  let data = fs.readFileSync(CONFIG.pomodoroTimerPath, 'cbor')
+  console.log(data.settings.work)
+  console.log(data.settings.rest)
+  console.log(data.settings.longRest)
+  console.log(data.settings.longRestAfter)
+  console.log(data.settings.totalIntervals)
+  console.log(data.internalStates.notifyTimerHandler)
+  console.log(data.internalStates.timerState)
+  console.log(data.internalStates.intvlState)
+  console.log(data.internalStates.doneIntvls)
+  console.log(data.internalStates.startedAt)
+  console.log(data.internalStates.pausedAt)
+  console.log(data.internalStates.countdown)
+  console.log(data.internalStates.intvlMarker.ts)
+  console.log(data.internalStates.intvlMarker.state)
+  console.log(data.internalStates.intvlMarker.intvl)
+} catch (e) {
+  console.log('DEBUGGING: Faild to load file.')
+}
+*/
+
+// App closing handler
+me.addEventListener('unload', (evt) => {
+  console.log('App closing. Store current pomodoro state...')
+  pomo.saveToFile(CONFIG.pomodoroTimerPath)
+  console.log('Finished.')
+})
+
+console.log('Loading PomodoroTimer from file...')
+let pomo = PomodoroTimer.loadFromFile(CONFIG.pomodoroTimerPath)
+if (!pomo) {
+  console.log('Failed. Create new PomodoroTimer.')
+  pomo = new PomodoroTimer(CONFIG.pomodoroSettings)
+}
 console.log('Adding notification handler to PomodoroTimer.')
 pomo.onnotify = () => {
   console.log('NOTIFY!!!')
