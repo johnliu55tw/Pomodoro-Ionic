@@ -1,0 +1,15 @@
+{
+  "fitbit": {
+    "appUUID": "43061ece-2b45-4c66-97b4-5ee7756dd1b2",
+    "appType": "app",
+    "appDisplayName": "Pomodoro",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "#607d8b",
+    "requestedPermissions": [],
+    "i18n": {
+      "en": {
+        "name": "Pomodoro"
+      }
+    }
+  }
+}

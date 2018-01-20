@@ -1,0 +1,15 @@
+image.icon {
+  fill: "fb-white";
+}
+/* Required for enabling the button. */
+rect.button {
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+/* Debugging: Turn all the bg color to gray */
+.background {
+  width: 100%;
+  height: 100%;
+  fill: gray;
+}
