@@ -20,7 +20,8 @@ function getIntvlStateColor (intvlState) {
 
 export function datetime (date) {
   /* Takes a Date object to update time related views */
-  timeText().text = date.getHours().toString() + ':' + date.getMinutes().toString()
+  timeText().text = utils.toMonoDigits(date.getHours()) + ':' +
+                    utils.toMonoDigits(date.getMinutes())
 }
 
 export function pomodoro (pomoTimer) {
