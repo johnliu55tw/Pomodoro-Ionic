@@ -110,5 +110,5 @@ buttons.flag().addEventListener('click', () => {
   // Close after 3 seconds
   setTimeout(() => {
     views.hideOptionsMenu()
-  }, 3000)
+  }, 2000)
 })
