@@ -3,15 +3,12 @@ import document from 'document'
 import {vibration} from 'haptics'
 
 import * as buttons from 'buttons'
-
-let countdownArc = document.getElementById('countdown-arc')
+import * as views from 'views'
 
 clock.granularity = 'seconds'
+// Update current time
 clock.addEventListener('tick', (evt) => {
-  let seconds = evt.date.getSeconds()
-  let angle = seconds * 6 // (seconds / 60) * 360
-  console.log()
-  countdownArc.sweepAngle = angle
+  views.datetime(evt.date)
 })
 
 buttons.reset().addEventListener('click', (evt) => {
