@@ -49,24 +49,24 @@ export function pomodoro (pomoTimer) {
   let color = getIntvlStateColor(pomoTimer.intvlState)
   switch (pomoTimer.timerState) {
     case PomoTimerState.running:
-      playIcon().style.visibility = 'hidden'
-      pauseIcon().style.visibility = 'visible'
+      btnToggleIcon().image = 'icons/pause.png'
+      btnToggleIconPress().image = 'icons/pause_press.png'
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = color
       break
 
     case PomoTimerState.paused:
-      playIcon().style.visibility = 'visible'
-      pauseIcon().style.visibility = 'hidden'
+      btnToggleIcon().image = 'icons/play.png'
+      btnToggleIconPress().image = 'icons/play_press.png'
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = 'gray'
       break
 
     case PomoTimerState.idle:
-      playIcon().style.visibility = 'visible'
-      pauseIcon().style.visibility = 'hidden'
+      btnToggleIcon().image = 'icons/play.png'
+      btnToggleIconPress().image = 'icons/play_press.png'
       pomoTime().style.fill = 'gray'
       pomoSets().style.fill = 'gray'
       pomoCircle().style.fill = 'gray'
@@ -74,22 +74,16 @@ export function pomodoro (pomoTimer) {
   }
 }
 
-export function showOptionsMenu () {
-  optionsContainer().style.visibility = 'visible'
-  flagButton().style.visibility = 'hidden'
-}
-
-export function hideOptionsMenu () {
-  optionsContainer().style.visibility = 'hidden'
-  flagButton().style.visibility = 'visible'
-}
-
 /* Helper functions for getting the elements */
 let timeText = () => document.getElementById('stat-text')
 let pomoTime = () => document.getElementById('countdown-counter')
 let pomoSets = () => document.getElementById('interval-counter')
 let pomoCircle = () => document.getElementById('countdown-arc')
-let playIcon = () => document.getElementById('play-icon')
-let pauseIcon = () => document.getElementById('pause-icon')
-let optionsContainer = () => document.getElementById('options-container')
-let flagButton = () => document.getElementById('flag-button')
+
+let btnToggle = () => document.getElementById('btn-toggle')
+let btnToggleIcon = () => btnToggle().getElementById('combo-button-icon')
+let btnToggleIconPress = () => btnToggle().getElementById('combo-button-icon-press')
+
+/* Not used
+let btnTl = () => document.getElementById('btn-tl')
+*/

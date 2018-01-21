@@ -63,10 +63,8 @@ clock.addEventListener('tick', (evt) => {
   views.pomodoro(pomo)
 })
 
-buttons.reset().addEventListener('click', (evt) => {
+buttons.reset().addEventListener('activate', (evt) => {
   console.log('reset')
-  vibration.start('confirmation')
-  views.hideOptionsMenu()
 
   console.log('Reset. Create new PomodoroTimer.')
   pomo.reset() // This is required to clear the notify timer
@@ -80,35 +78,23 @@ buttons.reset().addEventListener('click', (evt) => {
   views.pomodoro(pomo)
 })
 
-buttons.skip().addEventListener('click', (evt) => {
+buttons.skip().addEventListener('activate', (evt) => {
   console.log('skip')
-  vibration.start('confirmation')
-  views.hideOptionsMenu()
-
   pomo.skip()
   pomo.update()
   views.pomodoro(pomo)
 })
 
-buttons.toggle().addEventListener('click', (evt) => {
+buttons.toggle().addEventListener('activate', (evt) => {
   console.log('toggle')
-  vibration.start('confirmation')
   pomo.toggle()
   pomo.update()
   views.pomodoro(pomo)
 })
 
+/* XXX: Later
 buttons.stat().addEventListener('click', (evt) => {
   console.log('stat. Do nothing right now.')
   vibration.start('confirmation')
 })
-
-buttons.flag().addEventListener('click', () => {
-  console.log('flag.')
-  vibration.start('confirmation')
-  views.showOptionsMenu()
-  // Close after 3 seconds
-  setTimeout(() => {
-    views.hideOptionsMenu()
-  }, 2000)
-})
+*/
