@@ -55,6 +55,7 @@ export function pomodoro (pomoTimer) {
       pomoSets().style.fill = color
       pomoCircle().style.fill = color
       btnReset().style.visibility = 'hidden'
+      btnSkip().style.visibility = 'hidden'
       break
 
     case PomoTimerState.paused:
@@ -64,6 +65,7 @@ export function pomodoro (pomoTimer) {
       pomoSets().style.fill = color
       pomoCircle().style.fill = 'gray'
       btnReset().style.visibility = 'visible'
+      btnSkip().style.visibility = 'visible'
       break
 
     case PomoTimerState.idle:
@@ -73,6 +75,7 @@ export function pomodoro (pomoTimer) {
       pomoSets().style.fill = 'gray'
       pomoCircle().style.fill = 'gray'
       btnReset().style.visibility = 'hidden'
+      btnSkip().style.visibility = 'hidden'
       break
   }
 }
@@ -88,6 +91,7 @@ let btnToggleIcon = () => btnToggle().getElementById('combo-button-icon')
 let btnToggleIconPress = () => btnToggle().getElementById('combo-button-icon-press')
 
 let btnReset = () => document.getElementById('btn-x')
+let btnSkip = () => document.getElementById('btn-skip')
 
 /* Not used
 let btnTl = () => document.getElementById('btn-tl')
