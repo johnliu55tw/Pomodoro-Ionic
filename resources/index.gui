@@ -21,30 +21,29 @@
       22:38
     </text>
   </svg>
-  
-  <!--'buttom-center' area.-->
-  <svg id="toggle-button" class="button toggle" x="33%" y="50%" width="33%" height="50%" pointer-events="visible">
-    <rect class="button"/>
-    <image id="play-icon" class="toggle play icon" x="50%-23" y="50%-23" height="46" width="46" href="icons/play.png"/>
-    <image id="pause-icon" class="toggle pause icon" x="50%-23" y="50%-23" height="46" width="46" href="icons/pause.png" visibility="hidden"/>
-  </svg>
- 
-  <!--'top-right' area.-->
-  <svg id="flag-button" class="button flag" x="66%" y="0" width="33%" height="50%" pointer-events="visible">
-    <rect class="button"/>
-    <image id="flag-icon" class="flag icon" x="100%-58" y="12" height="46" width="46" href="icons/flag.png"/>
-  </svg>
-  
-  <svg id="options-container" class="options" visibility="hidden">
-    <!--'top-left' area.-->
-    <svg id="reset-button" class="options reset button" x="0" y="0" width="33%" height="50%" pointer-events="visible">
-      <rect class="button"/>
-      <image id="reset-icon" class="options reset icon" x="12" y="12" height="46" width="46" href="icons/reset.png"/>
-    </svg>
-    <!--'top-right' area.-->
-    <svg id="skip-button" class="options skip button" x="66%" y="0" width="33%" height="50%" pointer-events="visible">
-      <rect class="button"/>
-      <image id="skip-icon" class="options skip icon" x="100%-58" y="12" height="46" width="46" href="icons/skip.png"/>
-    </svg>
+
+  <svg>
+    <!-- TOP LEFT -->
+    <use id="btn-x" href="#combo-button-upper-left" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="icons/x.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="icons/x_press.png"/>
+    </use>
+    <!-- TOP RIGHT -->
+    <use id="btn-skip" href="#combo-button-upper-right" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="icons/skip.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="icons/skip_press.png"/>
+    </use>
+    <!-- BOTTOM RIGHT -->
+    <use id="btn-toggle" href="#combo-button-lower-right" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="icons/play.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="icons/play_press.png"/>
+    </use>
+    <!-- BOTTOM LEFT - Not used
+    <use id="btn-bl" href="#combo-button-lower-left" fill="fb-white">
+      <set href="combo-button-icon" attributeName="href" to="headphone.png"/>
+      <set href="combo-button-icon-press" attributeName="href" to="headphone_press.png"/>
+      <set href="combo-button-stroke" attributeName="display" to="inline"/>
+    </use>
+    -->
   </svg>
 </svg>
