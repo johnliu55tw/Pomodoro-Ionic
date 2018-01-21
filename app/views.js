@@ -29,7 +29,6 @@ export function pomodoro (pomoTimer) {
   pomoSets().text = pomoTimer.doneIntvls.toString() + '/' +
                     pomoTimer.totalIntervals.toString()
   // The countdown circle
-  // XXX Fixed this
   let countdownTotal = null
   switch (pomoTimer.intvlState) {
     case PomoIntvlState.work:
