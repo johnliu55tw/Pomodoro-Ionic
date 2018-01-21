@@ -46,6 +46,7 @@ export function pomodoro (pomoTimer) {
 
   // When paused, only the circle will be gray. The text will be the color indicating
   // what states it currently on
+  // TODO: Maybe the visibility of btnReset shouldn't be here...?
   let color = getIntvlStateColor(pomoTimer.intvlState)
   switch (pomoTimer.timerState) {
     case PomoTimerState.running:
@@ -54,6 +55,7 @@ export function pomodoro (pomoTimer) {
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = color
+      btnReset().style.visibility = 'hidden'
       break
 
     case PomoTimerState.paused:
@@ -62,6 +64,7 @@ export function pomodoro (pomoTimer) {
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = 'gray'
+      btnReset().style.visibility = 'visible'
       break
 
     case PomoTimerState.idle:
@@ -70,12 +73,13 @@ export function pomodoro (pomoTimer) {
       pomoTime().style.fill = 'gray'
       pomoSets().style.fill = 'gray'
       pomoCircle().style.fill = 'gray'
+      btnReset().style.visibility = 'hidden'
       break
   }
 }
 
 /* Helper functions for getting the elements */
-let timeText = () => document.getElementById('stat-text')
+let timeText = () => document.getElementById('time-text')
 let pomoTime = () => document.getElementById('countdown-counter')
 let pomoSets = () => document.getElementById('interval-counter')
 let pomoCircle = () => document.getElementById('countdown-arc')
@@ -83,6 +87,8 @@ let pomoCircle = () => document.getElementById('countdown-arc')
 let btnToggle = () => document.getElementById('btn-toggle')
 let btnToggleIcon = () => btnToggle().getElementById('combo-button-icon')
 let btnToggleIconPress = () => btnToggle().getElementById('combo-button-icon-press')
+
+let btnReset = () => document.getElementById('btn-x')
 
 /* Not used
 let btnTl = () => document.getElementById('btn-tl')
