@@ -1,9 +1,9 @@
 <svg>
   <section>
-    <arc x="50%-110" y="50%-110" width="220" height="220" fill="white"
-      arc-width="4" start-angle="0" sweep-angle="360"/>
+    <arc x="50%-110" y="50%-110" width="220" height="220" fill="fb-extra-dark-gray"
+      arc-width="10" start-angle="0" sweep-angle="360"/>
     <arc id="countdown-arc" x="50%-110" y="50%-110" width="220" height="220" fill="fb-red"
-      arc-width="4.5" start-angle="0" sweep-angle="333.333"/>
+      arc-width="10" start-angle="0" sweep-angle="333.333"/>
 
     <text id="countdown-counter" font-family="System-Bold" font-size="60" text-anchor="middle" x="50%" y="50%+15" fill="white">
       24:59
