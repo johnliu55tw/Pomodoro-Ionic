@@ -36,7 +36,6 @@ try {
 me.addEventListener('unload', (evt) => {
   console.log('App closing. Store current pomodoro state...')
   pomo.saveToFile(CONFIG.pomodoroTimerPath)
-  console.log('Finished.')
 })
 
 console.log('Loading PomodoroTimer from file...')
@@ -45,7 +44,7 @@ if (!pomo) {
   console.log('Failed. Create new PomodoroTimer.')
   pomo = new PomodoroTimer(CONFIG.pomodoroSettings)
 }
-console.log('Adding notification handler to PomodoroTimer.')
+
 pomo.onnotify = () => {
   console.log('NOTIFY!!!')
   vibration.start('nudge')
@@ -64,12 +63,9 @@ clock.addEventListener('tick', (evt) => {
 })
 
 buttons.reset().addEventListener('activate', (evt) => {
-  console.log('reset')
-
-  console.log('Reset. Create new PomodoroTimer.')
+  console.log('Reset btn pressed.')
   pomo.reset() // This is required to clear the notify timer
   pomo = new PomodoroTimer(CONFIG.pomodoroSettings)
-  console.log('Adding notification handler to PomodoroTimer.')
   pomo.onnotify = () => {
     console.log('NOTIFY!!!')
     vibration.start('nudge')
@@ -79,14 +75,14 @@ buttons.reset().addEventListener('activate', (evt) => {
 })
 
 buttons.skip().addEventListener('activate', (evt) => {
-  console.log('skip')
+  console.log('Skip btn pressed')
   pomo.skip()
   pomo.update()
   views.pomodoro(pomo)
 })
 
 buttons.toggle().addEventListener('activate', (evt) => {
-  console.log('toggle')
+  console.log('Toggle btn pressed')
   pomo.toggle()
   pomo.update()
   views.pomodoro(pomo)

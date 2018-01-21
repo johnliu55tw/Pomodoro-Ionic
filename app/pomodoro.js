@@ -83,6 +83,7 @@ export function PomodoroTimer (settings, notifyCallback) {
       intvl: intvlMarkers
     }
   }
+  /* Public methods */
   // Reset/Initialize internal states
   this.reset = () => {
     if (this.notifyTimerHandler) {
@@ -105,7 +106,7 @@ export function PomodoroTimer (settings, notifyCallback) {
     }
     this.notifyTimerHandler = null
   }
-  /* Public methods */
+
   this.saveToFile = (path) => {
     let storedObj = {
       settings: {
@@ -129,6 +130,7 @@ export function PomodoroTimer (settings, notifyCallback) {
     }
     fs.writeFileSync(path, storedObj, 'cbor')
   }
+
   this.toggle = (now) => {
     if (!now) {
       now = Date.now()
@@ -158,14 +160,13 @@ export function PomodoroTimer (settings, notifyCallback) {
   }
 
   this.skip = () => {
-    console.log('Skip')
     let now = Date.now()
 
     if (this.timerState === PomoTimerState.running) {
       let closest = findNextClosest(this.intvlMarker.ts, now)
 
       if (closest < 0) {
-        console.log('Skip the last one, finished.')
+        console.log('PomodoroTimer: Skip the last interval. Finished.')
         this.reset()
         return
       }
@@ -175,7 +176,7 @@ export function PomodoroTimer (settings, notifyCallback) {
         this.notifyTimerHandler = null
       }
       let fastForward = this.intvlMarker.ts[closest] - now
-      console.log('Fast forwarding ' + fastForward.toString() + ' milliseconds.')
+      console.log('PomodoroTimer: Fast forwarding ' + fastForward.toString() + ' milliseconds.')
       let newStartedAt = this.startedAt - fastForward
       this.intvlMarker = this._getMarkers(newStartedAt)
       this.startedAt = newStartedAt
@@ -184,13 +185,13 @@ export function PomodoroTimer (settings, notifyCallback) {
       let closest = findNextClosest(this.intvlMarker.ts, this.pausedAt)
 
       if (closest < 0) {
-        console.log('Skip the last one, finished.')
+        console.log('PomodoroTimer: Skip the last interval. Finished.')
         this.reset()
         return
       }
 
       let fastForward = this.intvlMarker.ts[closest] - this.pausedAt
-      console.log('Fast forwarding pausedAt ' + fastForward.toString() + ' milliseconds.')
+      console.log('PomodoroTimer: Fast forwarding ' + fastForward.toString() + ' milliseconds.')
       this.pausedAt = this.pausedAt + fastForward
       // Start the timer!
       this.toggle()
@@ -209,7 +210,7 @@ export function PomodoroTimer (settings, notifyCallback) {
         this.intvlState = this.intvlMarker.state[closest] // Update interval state
         this.doneIntvls = this.intvlMarker.intvl[closest]
       } else { // End
-        console.log('Timer end')
+        console.log('PomodoroTimer: Last interval finished. Reset.')
         this.reset()
         return
       }
@@ -221,10 +222,10 @@ export function PomodoroTimer (settings, notifyCallback) {
         // small value. So we set a handler here that if the countdown is
         // smaller than 2 seconds, call update again later.
         if (this.countdown < 2000) {
-          console.log('Countdown < 2 secs: ' + this.countdown.toString() + ', call later!')
+          console.log('PomodoroTimer: Countdown < 2 secs: ' + this.countdown.toString() + ', call later!')
           setTimeout(this.update, 2000)
         } else {
-          console.log('Setup notify handler countdown for: ' + this.countdown.toString())
+          console.log('PomodoroTimer: Setup notify handler countdown for: ' + this.countdown.toString())
           this.notifyTimerHandler = setTimeout(this._notify, this.countdown)
         }
       }
