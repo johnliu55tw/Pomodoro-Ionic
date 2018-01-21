@@ -46,6 +46,8 @@ export function pomodoro (pomoTimer) {
   // When paused, only the circle will be gray. The text will be the color indicating
   // what states it currently on
   // TODO: Maybe the visibility of btnReset shouldn't be here...?
+  // XXX: Change the visibility of each button only disabled the touch button,
+  //  The corresponding hardware button still works!
   let color = getIntvlStateColor(pomoTimer.intvlState)
   switch (pomoTimer.timerState) {
     case PomoTimerState.running:
@@ -55,7 +57,7 @@ export function pomodoro (pomoTimer) {
       pomoSets().style.fill = color
       pomoCircle().style.fill = color
       btnReset().style.visibility = 'hidden'
-      btnSkip().style.visibility = 'hidden'
+      btnSkip().style.visibility = 'visible'
       break
 
     case PomoTimerState.paused:
