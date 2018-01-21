@@ -6,7 +6,9 @@ function getIntvlStateColor (intvlState) {
   let color = null
   switch (intvlState) {
     case PomoIntvlState.work:
-      color = 'fb-red'
+      // Pomodoro red. This is the color of the logo picture on this page:
+      // http://pomodorotechnique.com
+      color = '#d33b37'
       break
     case PomoIntvlState.rest:
       color = 'fb-blue'
