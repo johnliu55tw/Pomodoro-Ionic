@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="icon-design.svg"
+   inkscape:version="0.92.2 5c3e80d, 2017-08-06">
+  <defs
+     id="defs2">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 148.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="210 : 148.5 : 1"
+       inkscape:persp3d-origin="105 : 99 : 1"
+       id="perspective833" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="-67.405279"
+     inkscape:cy="112.38122"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1908"
+     inkscape:window-height="1041"
+     inkscape:window-x="4"
+     inkscape:window-y="4"
+     inkscape:window-maximized="0" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+       x="-11.125094"
+       y="288.01306"
+       id="text845"><tspan
+         sodipodi:role="line"
+         id="tspan843"
+         x="-11.125094"
+         y="297.37683"
+         style="stroke-width:0.26458332"></tspan></text>
+    <path
+       cx="10.583332"
+       cy="287.47501"
+       rx="9.260417"
+       ry="8.2020836"
+       id="path861"
+       style="fill:#ff6347;fill-opacity:1;stroke:none;stroke-width:0.77390975;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <rect
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       style="fill:#000000;fill-opacity:0.03030306;stroke:none;stroke-width:1.19299996;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect927"
+       width="21.166666"
+       height="21.166666"
+       x="-3.5527137e-15"
+       y="275.83334"
+       inkscape:export-filename="/home/john/Projects/Fitbit/Pomodoro/resources/icon.png" />
+    <path
+       inkscape:connector-curvature="0"
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       id="path929"
+       d="m 10.583333,279.27286 a 9.2604168,8.2020835 0 0 0 -9.260416,8.20209 9.2604168,8.2020835 0 0 0 9.260416,8.20208 9.2604168,8.2020835 0 0 0 9.260417,-8.20208 9.2604168,8.2020835 0 0 0 -9.260417,-8.20209 z m 0,1.17203 a 7.9374999,7.0303569 0 0 1 7.9375,7.03006 7.9374999,7.0303569 0 0 1 -7.9375,7.03059 7.9374999,7.0303569 0 0 1 -7.9375,-7.03059 7.9374999,7.0303569 0 0 1 7.9375,-7.03006 z"
+       style="fill:#d33b37;fill-opacity:1;stroke:none;stroke-width:0.77390975;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/john/Projects/Fitbit/Pomodoro/resources/icon.png" />
+    <rect
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       style="fill:#64a950;fill-opacity:1;stroke:none;stroke-width:0.46517739;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect931"
+       width="1.3229166"
+       height="1.5875"
+       x="-245.35509"
+       y="134.59166"
+       ry="0.39687499"
+       transform="rotate(-64.209031)"
+       inkscape:export-filename="/home/john/Projects/Fitbit/Pomodoro/resources/icon.png" />
+    <g
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       transform="translate(1.351671,1.6745686)"
+       id="g941"
+       inkscape:export-filename="/home/john/Projects/Fitbit/Pomodoro/resources/icon.png">
+      <text
+         id="text935"
+         y="289.13919"
+         x="3.7655017"
+         style="font-style:normal;font-weight:normal;font-size:10.58333302px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#d33b37;fill-opacity:1;stroke:none;stroke-width:0.26458332"
+         xml:space="preserve"><tspan
+           id="tspan933"
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:9.17222214px;font-family:'DejaVu Sans Mono';-inkscape-font-specification:'DejaVu Sans Mono Bold';fill:#d33b37;fill-opacity:1;stroke-width:0.26458332"
+           y="289.13919"
+           x="3.7655017"
+           sodipodi:role="line">25</tspan></text>
+    </g>
+    <path
+       inkscape:export-ydpi="96"
+       inkscape:export-xdpi="96"
+       id="path943"
+       style="fill:none;fill-opacity:1;stroke:#64a950;stroke-width:1.32291663;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       sodipodi:type="arc"
+       sodipodi:cx="10.625093"
+       sodipodi:cy="286.15826"
+       sodipodi:rx="9.260417"
+       sodipodi:ry="8.2020836"
+       sodipodi:start="4.5378561"
+       sodipodi:end="4.8869219"
+       d="m 9.0170393,278.08079 a 9.260417,8.2020836 0 0 1 3.2161087,0"
+       sodipodi:open="true"
+       inkscape:transform-center-x="0.23386084"
+       inkscape:transform-center-y="1.0683424"
+       inkscape:export-filename="/home/john/Projects/Fitbit/Pomodoro/resources/icon.png" />
+  </g>
+</svg>
