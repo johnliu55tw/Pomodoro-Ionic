@@ -87,10 +87,3 @@ buttons.toggle().addEventListener('activate', (evt) => {
   pomo.update()
   views.pomodoro(pomo)
 })
-
-/* XXX: Later
-buttons.stat().addEventListener('click', (evt) => {
-  console.log('stat. Do nothing right now.')
-  vibration.start('confirmation')
-})
-*/

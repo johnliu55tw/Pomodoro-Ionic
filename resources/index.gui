@@ -18,11 +18,6 @@
     </text>
   </section>
 
-  <!--'buttom-left' area.-->
-  <svg id="stat-button" class="button stat" x="0" y="50%" width="33%" height="50%" pointer-events="visible">
-    <rect class="button"/>
-  </svg>
-
   <svg>
     <!-- TOP LEFT -->
     <use id="btn-x" href="#combo-button-upper-left" fill="fb-white">
