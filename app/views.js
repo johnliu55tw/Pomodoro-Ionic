@@ -58,8 +58,8 @@ export function pomodoro (pomoTimer) {
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = color
-      btnReset().style.visibility = 'hidden'
-      btnSkip().style.visibility = 'visible'
+      btnReset().disable()
+      btnSkip().disable()
       break
 
     case PomoTimerState.paused:
@@ -68,8 +68,8 @@ export function pomodoro (pomoTimer) {
       pomoTime().style.fill = color
       pomoSets().style.fill = color
       pomoCircle().style.fill = 'gray'
-      btnReset().style.visibility = 'visible'
-      btnSkip().style.visibility = 'visible'
+      btnReset().enable()
+      btnSkip().enable()
       break
 
     case PomoTimerState.idle:
@@ -78,8 +78,8 @@ export function pomodoro (pomoTimer) {
       pomoTime().style.fill = 'gray'
       pomoSets().style.fill = 'gray'
       pomoCircle().style.fill = 'gray'
-      btnReset().style.visibility = 'hidden'
-      btnSkip().style.visibility = 'hidden'
+      btnReset().disable()
+      btnSkip().disable()
       break
   }
 }
