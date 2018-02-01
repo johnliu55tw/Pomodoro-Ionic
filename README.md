@@ -2,6 +2,9 @@
 
 A pomodoro timer for Fitbit Ionic.
 
+![working](./docs/screenshots/working.png)
+![working](./docs/screenshots/short-break.png)
+
 ## Description
 
 Simple to use Pomodoro timer for your Ionic!
