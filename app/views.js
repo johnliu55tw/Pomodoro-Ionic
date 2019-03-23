@@ -1,6 +1,6 @@
 import document from 'document'
 import * as utils from '../common/utils.js'
-import {PomoIntvlState, PomoTimerState} from 'pomodoro'
+import {PomoIntvlState, PomoTimerState} from './pomodoro'
 
 function getIntvlStateColor (intvlState) {
   let color = null

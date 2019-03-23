@@ -1,15 +1,25 @@
 {
   "fitbit": {
-    "appUUID": "43061ece-2b45-4c66-97b4-5ee7756dd1b2",
+    "appUUID": "cb1834d8-9fdb-46b8-b5b2-b33596da53fc",
     "appType": "app",
     "appDisplayName": "Pomodoro",
     "iconFile": "resources/icon.png",
     "wipeColor": "#607d8b",
-    "requestedPermissions": [],
+    "requestedPermissions": [
+      "access_heart_rate"
+    ],
+    "buildTargets": [
+      "higgs"
+    ],
     "i18n": {
       "en": {
-        "name": "Pomodoro"
+        "name": "PomodoroClock"
       }
-    }
+    },
+    "defaultLanguage": "en-US"
+  },
+  "devDependencies": {
+    "@fitbit/sdk": "~3.1.0",
+    "@fitbit/sdk-cli": "^1.6.0"
   }
 }
