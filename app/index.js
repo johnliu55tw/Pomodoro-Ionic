@@ -59,7 +59,7 @@ clock.addEventListener('tick', (evt) => {
 })
 // Update Pomodoro view
 clock.addEventListener('tick', (evt) => {
-  pomo.update(evt.date)
+  pomo.update()
   views.pomodoro(pomo)
 })
 
